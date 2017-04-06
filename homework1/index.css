@@ -1,0 +1,30 @@
+body {
+	background: url(image/index.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+h1 {
+    color: #E67070;
+    font-family: "Tekton Pro", cursive, serif;
+    font-size: 50pt;
+    text-align: center;
+}
+p {
+    color: #D1EEEE;
+    font-family: "Tekton Pro", cursive, serif;
+    font-size: 36pt;
+    text-align: center;
+}
+a {
+	font-family: cursive;
+	color: #EE7AE9;
+	text-decoration: none;
+}
+.icon {
+    float: right;
+    animation: iconComic 2s infinite;
+    transition: transform 0.7s;
+}
+.icon:hover {
+	transform:rotate(180deg);
+}
