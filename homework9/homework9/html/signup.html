@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sign Up</title>
+	<link rel="stylesheet" type = "text/css" href="../css/signup.css">
+	<script type="text/javascript" src="../js/jQuery.js"></script>
+	<script type="text/javascript" src="../js/server.js"></script>
+	<script type="text/javascript" src="../js/signup.js"></script>
+</head>
+<body>
+	<img src="${pageContext.request.contextPath}/1.jpg">
+	<div id="container">
+		<h1>注册</h1>
+		<form method="post">
+			<p>昵称:
+				<input id="name" type="text" name="name" placeholder="6~18位英文字母、数字或下划线，必须以英文字母开头">
+				<div id="name_tip" type="text"></div>
+			</p>
+			<p>注册:
+				<input id="id" type="text" name="id" placeholder="学号8位数字，不能以0开头">
+				<div id="id_tip" type="text"></div>
+			</p>
+			<p>电话:
+				<input id="phone" type="text" name="phone" placeholder="电话11位数字，不能以0开头">
+				<div id="phone_tip" type="text"></div>
+			</p>
+			<p>邮箱:
+				<input id="email" type="text" name="email" placeholder="邮箱格式为xxx@xxx.xxx">
+				<div id="email_tip" type="text"></div>
+			</p>
+
+			<input type="button" id="reset" value="重置"></input>
+			<input type="submit" id="submit"></input>
+		</form>
+	</div>
+</body>
+</html>

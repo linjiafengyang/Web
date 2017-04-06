@@ -1,0 +1,61 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Georgia, Times, serif;
+	overflow: hidden;
+	background: -webkit-linear-gradient(top, #66CCFF, #EEEEEE);
+	background-size: 100% 100%;
+}
+h1, form{
+	text-align: center;
+}
+#container {
+	width: 500px;
+	height: 300px;
+	margin: 80px auto;
+	margin-bottom: 20px;
+}
+input {
+	width: 330px;
+	height: 20px;
+	font-size: 10pt;
+}
+p {
+	margin: 0;
+}
+#name_tip, #id_tip, #phone_tip, #email_tip {
+	width: 150px;
+	height: 20px;
+	color: red;
+	font-size: 10pt;
+	text-align: left;
+	margin-left: 175px;
+}
+#reset, #submit {
+	font-size: 12pt;
+	margin: 0px 30px;
+	width: 70px;
+	height: 30px;
+	background-color: rgb(17, 218, 249);
+	color: white;
+	cursor: pointer;
+}
+#reset:active, #submit:active {
+	box-shadow: inset 0px 0px 1px 1px rgb(99, 223, 242);
+	background-color: rgb(60, 193, 191);
+}
+#tips {
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	font-size: 12pt;
+}
+li {
+	margin-top: 10px;
+}
+#tips span {
+	position: relative;
+	right: 20px;
+}

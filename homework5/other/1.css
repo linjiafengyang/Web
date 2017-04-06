@@ -1,0 +1,413 @@
+/*
+ *	" -o- " is for Opera
+ *	" -ms- " is for IE9
+ *	" -moz- " is for Firefox 
+ *	" -webkit- " is for Safari and Chrome
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+
+	text-align: center;
+
+/*
+ *	I think this font is quite beautiful.
+ */
+
+	font-family: 'Comic Sans MS';
+}
+
+/* --------------- Container --------------- */
+
+#at-plus-container {
+	width: 500px;
+	height: 300px;
+
+	position: absolute;
+	bottom: 0%;
+	left: 50%;
+	margin-left: -250px;
+}
+
+/* ------------- Container END  ------------ */
+
+/* ------------------ Info ----------------- */
+
+.info {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+
+	background-color: rgba(80,80,80, 0.7);
+
+	position: absolute;
+	left: 250px;
+	top: 150px;
+
+	opacity: 0;
+
+	transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+.info li {
+	width: 20px;
+	height: 20px;
+
+	list-style: none;
+
+	text-align: left;
+
+	overflow: hidden;
+
+	position: absolute;
+	left: 3px;
+	top: 3px;
+
+	transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+.info span {
+	position: absolute;
+	top: 0px;
+}
+
+.user span {
+	left: 28px;
+	top: -2px;
+
+	color: white;
+	font-size: 15pt;
+	font-weight: bold;
+}
+
+.comment span {
+	left: 32px;
+	top: -10px;
+
+	color: white;
+	font-size: 22pt;
+	font-weight: bold;
+}
+
+.posted span {
+	left: 28px;
+	top: 0px;
+
+	color: #66CDAA;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+.like span {
+	left: 34px;
+	top: 0px;
+
+	color: #66CDAA;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+/* ---------------- Info END --------------- */
+
+/* -------------- Control-ring ------------- */
+
+.button {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+
+	list-style: none;
+
+	background-color: rgb(100,100,100);
+
+	opacity: 0;
+
+	position: absolute;
+	left: 250px;
+	top: 150px;
+
+	transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+/*
+ *	In teacher's video, those background-images are be inserted while apb is
+ *	hovered, but I think they will be more beautiful if they are there before.
+ */
+
+.mask {
+	background: rgb(100,100,100) center no-repeat url("images/ring-bar/nomask.png");
+}
+
+.history {
+	background: rgb(100,100,100) center no-repeat url("images/ring-bar/history.png");
+}
+
+.message {
+	background: rgb(100,100,100) center no-repeat url("images/ring-bar/message.png");
+}
+
+.setting {
+	background: rgb(100,100,100) center no-repeat url("images/ring-bar/setting.png");
+}
+
+.sign {
+	background: rgb(100,100,100) center no-repeat url("images/ring-bar/signin.png");
+}
+
+.unread {
+	display: block;
+
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+
+	position: absolute;
+
+	color: white;
+	font-size: 10pt;
+	font-weight: bold;
+
+	background-color: #EE0000;
+
+	opacity: 0;
+
+	transition: opacity;
+	-o-transition: opacity;
+	-moz-transition: opacity;
+	-webkit-transition: opacity;
+
+}
+
+/* ------------ Control-ring END ----------- */
+
+/* ------------------ Apb ------------------ */
+
+.icon {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+
+	position: absolute;
+	left: 250px;
+	top: 150px;
+
+	z-index: 1;
+
+	background-color: rgba(48, 63, 159, 0.6);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 21px 15px;
+	background-image: url("images/ring-bar/atplus_white.png");
+
+	transition: all 0.5s ease-in-out 0.5s;
+	-o-transition: all 0.5s ease-in-out 0.5s;
+	-moz-transition: all 0.5s ease-in-out 0.5s;
+	-webkit-transition: all 0.5s ease-in-out 0.5s;
+}
+
+/* ---------------- Apb END ---------------- */
+
+/* ------------------------- hover ------------------------- */
+
+/* ------------------ Apb ------------------ */
+
+#button:hover {
+	width: 300px;
+	height: 300px;
+
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+#button:hover .icon {
+	background-size: 21px 15px;
+	background-color: rgba(48, 63, 159, 1);
+	background-image: url("images/ring-bar/atplus_green.png");
+
+	transform: scale(2.0);
+	-o-transform: scale(2.0);
+	-ms-transform: scale(2.0);
+	-moz-transform: scale(2.0);
+	-webkit-transform: scale(2.0);
+
+	animation: wobble 0.5s 1 ease-in-out;
+	-o-animation: wobble 0.5s 1 ease-in-out;
+	-moz-animation: wobble 0.5s 1 ease-in-out;
+	-webkit-animation: wobble 0.5s 1 ease-in-out;
+
+	transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+
+/* ----- Animation defination ------ */
+
+@keyframes wobble  {
+	0%		{
+		top: 145px;
+	}
+	30%	{
+		top: 155px;
+	}
+	60%	{
+		top: 150px;
+	}
+}
+-o-@keyframes wobble  {
+	0%		{
+		top: 145px;
+	}
+	30%	{
+		top: 155px;
+	}
+	60%	{
+		top: 150px;
+	}
+}
+-moz-@keyframes wobble  {
+	0%		{
+		top: 145px;
+	}
+	30%	{
+		top: 155px;
+	}
+	60%	{
+		top: 150px;
+	}
+}
+-webkit-@keyframes wobble  {
+	0%		{
+		top: 145px;
+	}
+	30%	{
+		top: 155px;
+	}
+	60%	{
+		top: 150px;
+	}
+}
+
+/* --- Animation defination END ---- */
+
+/* ---------------- Apb END ---------------- */
+
+/* -------------- Control-ring ------------- */
+
+#button:hover #control-ring-container .button {
+	width: 40px;
+	height: 40px;
+
+	opacity: 1;
+}
+
+#button:hover #control-ring-container .mask {
+	left: 163px;
+	top: 98px;
+}
+
+#button:hover #control-ring-container .history {
+	left: 148px;
+	top: 146px;
+}
+
+#button:hover #control-ring-container .message {
+	left: 169px;
+	top: 192px;
+}
+
+#button:hover #control-ring-container .message .unread {
+	left: 25px;
+	top: -3px;
+	opacity: 1;
+}
+
+#button:hover #control-ring-container .setting {
+	left: 215px;
+	top: 225px;
+}
+
+#button:hover #control-ring-container .sign {
+	left: 270px;
+	top: 218px;
+}
+
+/* ------------ Control-ring END ----------- */
+
+/* ---------------- Info-bar --------------- */
+
+#button:hover #info-bar .info {
+	width: 126px;
+	height: 126px;
+
+	opacity: 1;
+
+	left: 200px;
+	top: 0px;
+}
+
+#button:hover #info-bar li {
+	width: 60px;
+	height: 30px;
+}
+
+#button:hover #info-bar .user {
+	left: 43px;
+	top: 8px;
+}
+
+#button:hover #info-bar .comment {
+	left: 35px;
+	top: 41px;
+}
+
+#button:hover #info-bar .posted {
+	left: 20px;
+	top: 75px;
+}
+
+#button:hover #info-bar .like {
+	left: 68px;
+	top: 75px;
+}
+
+/*
+ *	There are something left after debug, thanks to jeyo's help.
+ *
+ *		Invalid code
+ *
+ *	#button:hover #info-bar .user span {
+ *		left: 28px;
+ *		top: -2px;
+ *	}
+ *
+ *	#button:hover #info-bar .comment span {
+ *		left: 30px;
+ *		top: -7px;
+ *	}
+ *
+ *	#button:hover #info-bar .posted span {
+ *		left: 28px;
+ *		top: 0px;
+ *	}
+ *
+ *	#button:hover #info-bar .like span {
+ *		left: 34px;
+ *		top: 0px;
+ *	}
+ *
+ */
+
+/* -------------- Info-bar END ------------- */
+
+/* ----------------------- hover END ----------------------- */

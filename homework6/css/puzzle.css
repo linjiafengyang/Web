@@ -1,0 +1,213 @@
+* {
+	margin: 0 auto 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Comic Sans MS';
+}
+html {
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top, #efef8d, #FFFFFF);
+}
+.container {
+	width: 900px;
+	height: 600px;
+	margin-top: 20px;
+	box-shadow: 10px 10px 30px 5px #BDBDBD;
+	background: -webkit-linear-gradient(top, #f3f3a6, #FFFFFF);
+}
+/* -------------- Information -------------- */
+.information {
+	width: 500px;
+	height: 180px;
+	position: relative;
+}
+.title {
+	height: 60px;
+	font-size: 25pt;
+}
+.gameplay {
+	height: 40px;
+	font-size: 14pt;
+}
+#notice {
+	font-size: 20pt;
+	position: relative;
+	top: -10px;
+}
+#start {
+	width: 80px;
+	height: 25px;
+	position: absolute;
+	left: 50px;
+	top: 135px;
+	background-color: #66CCFF;
+	border-radius: 20px;
+}
+#giveUp {
+	width: 80px;
+	height: 25px;
+	position: absolute;
+	left: 210px;
+	top: 135px;
+	background-color: #66CCFF;
+	border-radius: 20px;
+}
+#auto {
+	width: 80px;
+	height: 25px;
+	position: absolute;
+	left: 370px;
+	top: 135px;
+	background-color: #66CCFF;
+	border-radius: 20px;
+}
+/* ------------ Information END ------------ */
+
+/* ------------- GameContainer ------------- */
+#gameContainer {
+	width: 800px;
+	height: 360px;
+	position: relative;
+}
+.piece {
+	float: left;
+	width: 88px;
+	height: 88px;
+	position: absolute;
+	border: 1px solid #BABCAE;
+	background-image: url(panda.jpg);
+	transform: none;
+	-webkit-transition: all 0.5s;
+}
+.space {
+	float: left;
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	-webkit-transition: all 0.5s;
+}
+.scaleEffect {
+	z-index: 1;
+	-webkit-transform: scale(1.08);
+}
+/* ----------- GameContainer END ----------- */
+
+/* ----------------------- Position ------------------------ */
+.position_1_1 {
+	left: 0px;
+	top: 0px;
+}
+.position_1_2 {
+	left: 90px;
+	top: 0px;
+}
+.position_1_3 {
+	left: 180px;
+	top: 0px;
+}
+.position_1_4 {
+	left: 270px;
+	top: 0px;
+}
+.position_2_1 {
+	left: 0px;
+	top: 90px;
+}
+.position_2_2 {
+	left: 90px;
+	top: 90px;
+}
+.position_2_3 {
+	left: 180px;
+	top: 90px;
+}
+.position_2_4 {
+	left: 270px;
+	top: 90px;
+}
+.position_3_1 {
+	left: 0px;
+	top: 180px;
+}
+.position_3_2 {
+	left: 90px;
+	top: 180px;
+}
+.position_3_3 {
+	left: 180px;
+	top: 180px;
+}
+.position_3_4 {
+	left: 270px;
+	top: 180px;
+}
+.position_4_1 {
+	left: 0px;
+	top: 270px;
+}
+.position_4_2 {
+	left: 90px;
+	top: 270px;
+}
+.position_4_3 {
+	left: 180px;
+	top: 270px;
+}
+.position_4_4 {
+	left: 270px;
+	top: 270px;
+}
+
+#piece_1 {
+	background-position: 0px 0px;
+}
+#piece_2 {
+	background-position: -88px 0px;
+}
+#piece_3 {
+	background-position: -176px 0px;
+}
+#piece_4 {
+	background-position: -264px 0px;
+}
+#piece_5 {
+	background-position: 0px -88px;
+}
+#piece_6 {
+	background-position: -88px -88px;
+}
+#piece_7 {
+	background-position: -176px -88px;
+}
+#piece_8 {
+	background-position: -264px -88px;
+}
+#piece_9 {
+	background-position: 0px -176px;
+}
+#piece_10 {
+	background-position: -88px -176px;
+}
+#piece_11 {
+	background-position: -176px -176px;
+}
+#piece_12 {
+	background-position: -264px -176px;
+}
+#piece_13 {
+	background-position: 0px -264px;
+}
+#piece_14 {
+	background-position: -88px -264px;
+}
+#piece_15 {
+	background-position: -176px -264px;
+}
+#originalPicture {
+	position: relative;
+	width: 360px;
+	height: 360px;
+	float: right;
+	background-image: url(panda.jpg);
+}

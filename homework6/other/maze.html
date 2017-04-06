@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Maze</title>
+		<link rel="stylesheet" type="text/css" href="maze.css">
+		<link rel="stylesheet" type="text/css" href="subNav.css">
+
+	</head>
+	<body>
+
+		<div class="container">
+
+			<div class="nav">
+				<div class="subNav_1 subNav"><a href="./maze.html">maze</a></div>
+				<div class="subNav_2 subNav"><a href="./whac-a-mole.html">whac-a-mole</a></div>
+				<div class="subNav_3 subNav"><a href="./puzzle.html">puzzle</a></div>
+			</div>
+
+			<div class="information">
+				<div class="title">The Amazing Mouse Maze!</div>
+				<div class="gameplay">Move your mouse over the "S" to begin.</div>
+				<div id="notice">Have a nice play.</div>
+			</div>
+
+			<div id="gameContainer">
+				<div id="start">S</div>
+				<div id="end">E</div>
+				<li class="wall" id="leftTop"></li>
+				<li class="wall" id="middleTop"></li>
+				<li class="wall" id="rightTop"></li>
+				<li class="wall" id="leftMiddle"></li>
+				<li class="wall" id="middleMiddle"></li>
+				<li class="wall" id="rightMiddle"></li>
+				<li class="wall" id="leftBottom"></li>
+				<li class="wall" id="middleBottom"></li>
+				<li class="wall" id="rightBottom"></li>
+			</div>
+
+			<div class="instruction">
+				<div class="alert">The object of this game is to guide the mouse cursor through the start area and get to the end area. Be sure to avoid the walls:</div>
+				<div class="example"></div>
+				<div class="wishes">Good luck!</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="maze.js"></script>
+
+	</body>
+</html>

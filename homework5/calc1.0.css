@@ -1,0 +1,112 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Comic Sans MS", Georgia, serif;
+	text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+.container {
+	width: 500px;
+	height: 600px;
+
+	padding-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.calcContainer {
+	width: 400px;
+	height: 480px;
+
+	border: 1px solid #000000;
+	border-radius: 15px;
+
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #323232;
+}
+.title {
+	margin-top: 5px;
+	text-align: center;
+	color: rgba(0, 255, 171, 0.9);
+	font-family: monospace;
+	font-size: 15pt;
+	font-style: italic;
+}
+.display {
+	width: 360px;
+	height: 80px;
+
+	margin: auto;
+	margin-top: 8px;
+
+	border: 1px solid #000000;
+	background-color: #BFBFBF;
+}
+#expression {
+	height: 30px;
+	margin-left: 8px;
+	margin-right: 8px;
+
+	font-size: 18pt;
+	text-align: right;
+	overflow: hidden;
+}
+.splitLine {
+	margin-left: 8px;
+	margin-right: 8px;
+	border: 1px solid #000000;
+}
+#result {
+	height: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	font-size: 22pt;
+	text-align: right;
+	overflow: hidden;
+}
+.button {
+	margin-left: 15px;
+	margin-top: 35px;
+}
+button {
+	float: left;
+	width: 80px;
+	height: 37px;
+
+	margin: 5px;
+	padding-top: 3px;
+
+	list-style: none;
+
+	font-size: 18pt;
+	text-align: center;
+
+	background-color: #EAEAEA;
+	border: 1px solid #000000;
+}
+.divide {
+	background-color: #357fe2;
+}
+.multiply {
+	background-color: #357fe2;
+}
+.add {
+	background-color: #357fe2;
+}
+.subtract {
+	background-color: #357fe2;
+}
+.clearScreen {
+	width: 172px;
+	background-color: rgb(238, 64, 0);
+}
+.equal {
+	width: 172px;
+	background-color: rgb(238, 64, 0);
+}
+li:hover {
+	color: #FF0000;
+	background: -webkit-linear-gradient(#BFBFBF, #BFBFBF);
+	background: -o-linear-gradient(#BFBFBF, #BFBFBF);
+	background: linear-gradient(#BFBFBF, #BFBFBF);
+}

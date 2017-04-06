@@ -1,0 +1,56 @@
+﻿/*用户详情界面的css文件*/
+/*设置深色背景*/
+body{
+	background: #728eaa;
+	width: 100%;
+	height: 550px;
+    background: -moz-linear-gradient(top, #25303C 0%, #728EAA 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#25303C), color-stop(100%,#728EAA));
+    font-family: sans-serif;
+}
+/*信息显示部分的白色底*/
+body>div {
+	width: 430px;
+    margin: 60px auto;
+    padding: 30px 30px;
+    background: #c9d0de;
+    border: 1px solid #e1e1e1;
+    -moz-box-shadow: 0px 0px 8px #444;
+    -webkit-box-shadow: 0px 0px 8px #444;
+    overflow: hidden;
+    border-radius: 10px;
+}
+/*标题文字*/
+body>div>p {
+	font-size: 35px;
+    color: #445668;
+    text-align: center;
+    margin: 0 0 35px 0;
+    text-shadow: 0px 1px 0px #f2f2f2;
+}
+/*用户信息文字*/
+div div {
+    margin: 11px 10px 0 140px;
+    font-size: 16px;
+    color: #445668;
+    text-shadow: 0px 1px 0px #f2f2f2;
+}
+
+a {
+    width: 89px;
+    height: 50px;
+    float: right;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 0 15px 0 0;
+    -moz-box-shadow: 0px 0px 5px #999;
+    -webkit-box-shadow: 0px 0px 5px #999;
+    border: 1px solid #556f8c;
+    background: -moz-linear-gradient(top, #718DA9 0%, #415D79 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#718DA9), color-stop(100%,#415D79));
+    cursor: pointer;
+}

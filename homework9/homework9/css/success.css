@@ -1,0 +1,28 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Georgia, Times, serif;
+	overflow: hidden;
+	background: -webkit-linear-gradient(top, #66CCFF, #EEEEEE);
+	background-size: 100% 100%;
+}
+h1 {
+	text-align: center;
+}
+#container {
+	width: 400px;
+	height: 300px;
+	margin: 125px auto;
+}
+#name_tip, #id_tip, #phone_tip, #email_tip {
+	margin-top: 20px;
+	width: 400px;
+	height: 50px;
+	font-size: 15pt;
+	text-align: left;
+}
+span {
+	margin-left: 70px;
+}

@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(rel="stylesheet", type="text/css", href="/stylesheets/signin.css")
+    title Sigin
+  body
+    form(method="post")
+      p#tittle 用户登录
+      div 用户名：
+      input#name(type="text", name="username")
+      br
+      div  密码：
+      input#password(type="password", name="password")
+      br
+      p#error &nbsp;#{error}
+      //input(type="button", name="reset" value="注册" herf="/regist")
+      a(href='/regist') 注册
+      input(type="submit" value="登录")

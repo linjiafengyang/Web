@@ -1,0 +1,162 @@
+html {
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top, #E6E6FA, #FFFFFF);
+}
+.container {
+	width: 900px;
+	height: 600px;
+	margin-top: 20px;
+	box-shadow: 10px 10px 30px 5px #BDBDBD;
+	background: -webkit-linear-gradient(top, #F0F8FF, #FFFFFF);
+}
+/* -------------- Information -------------- */
+.title {
+	height: 60px;
+	font-size: 25pt;
+}
+.gameplay, #notice {
+	height: 40px;
+	font-size: 18pt;
+}
+/* ------------ Information END ------------ */
+
+/* ------------- GameContainer ------------- */
+#gameContainer {
+	width: 500px;
+	height: 300px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	position: relative;
+}
+#start {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 205px;
+	left: 0px;
+	float: left;
+	font-size: 18pt;
+	background-color: #87FD85;
+	border: 1px solid #000000;
+}
+#end {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 205px;
+	left: 460px;
+	float: left;
+	font-size: 18pt;
+	background-color: #8684FF;
+	border: 1px solid #000000;
+}
+.wall {
+	float: left;
+	list-style: none;
+	position: absolute;
+	background-color: #EEEEEE;
+	border: 1px solid #000000;
+}
+.touch {
+	background-color: #EE0000;
+}
+/* ----------- GameContainer END ----------- */
+
+/* -------------- Instruction -------------- */
+.alert {
+	width: 600px;
+	height: 50px;
+
+	line-height: 15px;
+
+	text-align: left;
+}
+.example {
+	width: 100px;
+	height: 25px;
+
+	left: 630px;
+	background-color: #EEEEEE;
+	border: 1px solid #000000;
+}
+.wishes {
+	width: 600px;
+	margin-top: 10px;
+
+	text-align: left;
+}
+/* ------------ Instruction END ------------ */
+
+/* --------------------- Wall Position --------------------- */
+#leftTop {
+	width: 150px;
+	height: 50px;
+	top: 0px;
+	left: 0px;
+	border-right: none;
+	border-bottom: none;
+}
+#middleTop {
+	width: 200px;
+	height: 50px;
+	top: 0px;
+	left: 151px;
+	border-left: none;
+	border-right: none;
+	z-index: 1;
+}
+#rightTop {
+	width: 150px;
+	height: 50px;
+	top: 0px;
+	left: 350.5px;
+	border-left: none;
+	border-bottom: none;
+}
+#leftMiddle {
+	width: 150px;
+	height: 150px;
+	top: 50px;
+	left: 0px;
+	border-top: none;
+}
+#middleMiddle {
+	width: 100px;
+	height: 150px;
+	top: 100px;
+	left: 200px;
+	border-bottom: none;
+	z-index: 1;
+}
+#rightMiddle {
+	width: 150px;
+	height: 150px;
+	top: 50px;
+	left: 350px;
+	border-top: none;
+}
+#leftBottom {
+	width: 200px;
+	height: 50px;
+	top: 250px;
+	left: 0px;
+	border-right: none;
+}
+#middleBottom {
+	width: 100px;
+	height: 50px;
+	top: 250.5px;
+	left: 200.5px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+#rightBottom {
+	width: 200px;
+	height: 50px;
+	top: 250px;
+	left: 301px;
+	border-left: none;
+}
+/* --------------------- Wall Position End--------------------- */

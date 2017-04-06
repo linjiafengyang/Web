@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    link(rel="stylesheet", type="text/css", href="/stylesheets/detail.css")
+    title Detail-Information
+  body
+    div
+      p 用户信息
+      div
+        p 用户名：#{user.username}
+        p 学号  ： #{user.sid}
+        p 电话  ： #{user.phone}
+        p 邮箱  ： #{user.email}
+      p#error #{error}
+      a(href='/signout') 退出登录

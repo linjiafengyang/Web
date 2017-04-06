@@ -1,0 +1,60 @@
+.nav {
+	float: left;
+
+	position: absolute;
+	top: 150px;
+}
+
+.subNav{
+	width: 10px;
+	height: 35px;
+
+	position: absolute;
+
+	overflow: hidden;
+
+	padding-top: 5px;
+
+	/*border: 1px solid #EE0000;*/
+
+	border-bottom-right-radius: 8px;
+	border-top-right-radius: 3px;
+
+	transition: all 0.3s ease-in-out;
+}
+
+a {
+	color: #FFFFFF;
+	font-size: 18px;
+
+	text-align: center;
+	text-decoration: none;
+
+	white-space: nowrap;
+}
+
+.subNav_1 {
+	background: -webkit-linear-gradient(top, #00FFFF, #66CCFF);
+}
+
+.subNav_1:hover {
+	width: 50px;
+}
+
+.subNav_2 {
+	top: 40px;
+	background: -webkit-linear-gradient(top, #FFB6C1, #EE0000);
+}
+
+.subNav_2:hover {
+	width: 120px;
+}
+
+.subNav_3 {
+	top: 80px;
+	background: -webkit-linear-gradient(top, #F0E68C, #FFD700);
+}
+
+.subNav_3:hover {
+	width: 60px;
+}

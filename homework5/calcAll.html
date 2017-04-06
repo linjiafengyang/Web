@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="calc.css">
+	<link rel="shortcut icon" type="image/gif" href="image/calc.png">
+	<title>Simple Calculator</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: "Comic Sans MS", serif;
+			text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+		}
+		.container {
+			width: 500px;
+			height: 600px;
+
+			padding-top: 40px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.calcContainer {
+			width: 400px;
+			height: 480px;
+
+			border: 1px solid #000000;
+			border-radius: 15px;
+
+			margin-left: auto;
+			margin-right: auto;
+			background-color: #323232;
+		}
+		.title {
+			margin-top: 5px;
+			text-align: center;
+			color: rgba(0, 255, 171, 0.9);
+			font-family: monospace;
+			font-size: 15pt;
+			font-style: italic;
+		}
+		.display {
+			width: 360px;
+			height: 80px;
+
+			margin: auto;
+			margin-top: 8px;
+			border: 1px solid #000000;
+			background-color: #BFBFBF;
+		}
+		#expression {
+			height: 30px;
+			margin-left: 8px;
+			margin-right: 8px;
+
+			font-size: 18pt;
+			text-align: right;
+			overflow: hidden;
+		}
+		.splitLine {
+			margin-left: 8px;
+			margin-right: 8px;
+			border: 1px solid #000000;
+		}
+		#result {
+			height: 50px;
+			margin-left: 10px;
+			margin-right: 10px;
+
+			font-size: 22pt;
+			text-align: right;
+			overflow: hidden;
+		}
+		.button {
+			margin-left: 15px;
+			margin-top: 35px;
+		}
+		li {
+			float: left;
+
+			width: 80px;
+			height: 37px;
+
+			margin: 5px;
+			padding-top: 3px;
+
+			list-style: none;
+
+			font-size: 18pt;
+			text-align: center;
+
+			background-color: #EAEAEA;
+			border: 1px solid #000000;
+		}
+		.divide {
+			background-color: #357fe2;
+		}
+		.multiply {
+			background-color: #357fe2;
+		}
+		.add {
+			background-color: #357fe2;
+		}
+		.subtract {
+			background-color: #357fe2;
+		}
+		.clearScreen {
+			width: 172px;
+			background-color: rgb(238, 64, 0);
+		}
+		.equal {
+			width: 172px;
+			background-color: rgb(238, 64, 0);
+		}
+		li:hover {
+			color: #FF0000;
+			background: -webkit-linear-gradient(#BFBFBF, #BFBFBF);
+			background: -o-linear-gradient(#BFBFBF, #BFBFBF);
+			background: linear-gradient(#BFBFBF, #BFBFBF);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="calcContainer">
+
+			<h3 class="title">Simple Calculator</h3>
+			<div class="display">
+				<div id="expression"></div>
+				<hr class="splitLine" />
+				<div id="result"></div>
+			</div>
+			<div class="button">
+				<ul>
+					<li title="清除表达式">CE</li>
+					<li>←</li>
+					<li class="clearScreen" title="清屏">CL</li>
+					<li>(</li>
+					<li>)</li>
+					<li title="分数与百分数转换">%</li>
+					<li class="divide">÷</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li class="multiply">×</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li class="subtract">-</li>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li class="add">+</li>
+					<li>0</li>
+					<li>.</li>
+					<li class="equal">=</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var expression = '';
+		var result = 0;
+		window.onload = function() {
+			displayExpression();
+			var list = document.getElementsByTagName('li');
+			for (var i = 0; i < list.length; i++) {
+				list[i].onclick = function() {
+					selection(this.innerHTML);
+				}
+			}
+		}
+		function selection(element) {
+			switch(element) {
+				case 'CE':
+					clearExpression();
+					break;
+				case '←':
+					backExpression();
+					break;
+				case 'CL':
+					clearScreen();
+					break;
+				case '=':
+					getResult();
+					break;
+				case '%':
+					displayResultByPercent();
+					break;
+				default:
+					addElementToExpression(element);
+					break;
+			}
+		}
+		function getResult() {
+			try {
+				if (expression === '') {
+					result = 0;
+				} else {
+					var expressionTemp = '';
+					for (var i = 0; i < expression.length; i++) {
+						if (expression[0] === '÷' || expression[0] === '×') {
+							document.getElementById('result').innerHTML = 'Invalid Input';
+						}
+						if (expression[i] === '÷') {
+							expressionTemp += '/';
+						} else if (expression[i] === '×') {
+							expressionTemp += '*';
+						} else {
+							expressionTemp += expression[i];
+						}
+					}
+					result = eval(expressionTemp);
+					displayResult();
+				}
+			} catch(err) {
+				document.getElementById('result').innerHTML = 'Invalid Input';
+			}
+		}
+		function addElementToExpression(element) {
+			if (expression[expression.length-1] === '+' || expression[expression.length-1] === '-' ||
+				expression[expression.length-1] === '÷' || expression[expression.length-1] === '×') {
+				if (element === '+' || element === '-' || element === '÷' || element === '×')
+					return;
+			}
+			expression += element;
+			displayExpression();
+		}
+		function backExpression() {
+			if (expression.length >= 2) {
+				expression = expression.substring(0, expression.length - 1);
+			} else {
+				expression = '';
+			}
+			displayExpression();
+		}
+		function clearExpression() {
+			expression = '';
+			displayExpression();
+		}
+		function clearScreen() {
+			expression = '';
+			result = 0;
+			displayExpression();
+			displayResult();
+		}
+		function displayExpression() {
+			if (expression === '') {
+				document.getElementById('expression').innerHTML = '';
+			} else {
+				document.getElementById('expression').innerHTML = expression;
+			}
+		}
+		function displayResult() {
+			if (result == Infinity || isNaN(result)) {
+				document.getElementById('result').innerHTML = 'Infinity';
+			} else if (expression !== '') {
+				document.getElementById('result').innerHTML = result;
+			} else {
+				document.getElementById('result').innerHTML = '';
+			}
+		}
+		function displayResultByPercent() {
+			if (expression !== '' && result < 1 && result > 0) {
+				result *= 100;
+				document.getElementById('result').innerHTML = result + '%';
+			}
+		}
+	</script>
+</body>
+</html>

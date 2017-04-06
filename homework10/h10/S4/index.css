@@ -1,0 +1,296 @@
+/*林子博 14331168 第二组
+第四次作业：修改第三次作业（实现圆形菜单按钮动画）的缺陷*/
+
+/*修改的地方：
+1、“Hover时#button没有覆盖整个有效区域，导致移到@+与灰色小圈之间的空白，@+收回去了”
+————修改后，鼠标在圆圈之间的空白处，不会收回
+2、修改左边五个小按钮的背景图片大小，符合作业要求
+3、修改浮标数字2的大小
+4、“@+收回去时，灰色小圈变小但背景图片不变，有点奇怪。”
+————修改后，收回时图标会变小*/
+body, html{
+	margin: 0;
+	padding: 0;
+	font-family: "楷体";
+	-moz-user-select:none;
+	-khtml-user-select:none;
+	-o-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none;
+}
+#InfoMessage{
+	position: fixed;
+	bottom: 300px;
+	left: 40%;
+	text-align: center;
+	font-size: 16pt;
+}
+#at-plus-container{
+	position: relative;
+}
+/*设置一个圆形的类，减少代码重复*/
+.circle{
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+/*将button对应的div作为获取hover的容器*/
+#button{
+	position: fixed;
+	width: 30px;
+	height: 30px;
+	left: 50%;
+	margin-left: -15px;
+	bottom: 90px;
+	color: #24E29D;
+	-webkit-transition:all 0.5s ease-in 0.5s;
+	-moz-transition:all 0.5s ease-in 0.5s;
+	-o-transition:all 0.5s ease-in 0.5s;
+	transition:all 0.5s ease-in 0.5s;
+}
+
+#button:hover {
+	width: 160px;
+	height: 160px;
+	margin-left: -80px;
+	bottom: 25px;
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+/*设置所有的ul没有标号*/
+ul{
+	list-style-type: none;
+	padding-left: 0px;
+}
+/*中间@容器*/
+.apb {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+}
+
+/*@图标*/
+.icon {
+	position: relative;
+	background-image:url(assets/images/atplus_white.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #969ACC;
+	background-size: 28px;
+	margin-left: auto;
+    margin-right: auto;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+
+	-webkit-transition:all 0.5s ease-in 0.5s;
+	-moz-transition:all 0.5s ease-in 0.5s;
+	-o-transition:all 0.5s ease-in 0.5s;
+	transition:all 0.5s ease-in 0.5s;
+}
+
+#button:hover div.icon{
+	background-image: url(assets/images/atplus_green.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgba(48, 63, 159, 1);
+	background-size: 40px;
+	width: 50px;
+	height: 50px;
+    margin-top: 45px; 
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+/*上端的信息圆环*/
+.info {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background-color: #7E7E7E;
+	text-align: center;
+	font-weight: bold;
+	font-size: 26pt;
+	overflow: hidden;
+	width: 10px;
+	height: 10px;
+	opacity: 0;
+	z-index: 1;
+	cursor: pointer;
+	-webkit-transition:all 0.5s ease-in;
+	-moz-transition:all 0.5s ease-in;
+	-o-transition:all 0.5s ease-in;
+	transition:all 0.5s ease-in;
+
+}
+
+#button:hover div.info {
+	width: 130px;
+	height: 130px;
+	opacity: 1;
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+
+	transform: translate(-64px, -165px);
+	-webkit-transform: translate(-64px, -165px);
+	-moz-transform: translate(-64px, -165px);
+	-ms-transform: translate(-64px, -165px);
+	-o-transform: translate(-64px, -165px);
+}
+
+/*div.info ul{
+	font-size: 14pt;
+	line-height: 2em;
+	margin-top: 8px;
+}*/
+/*用float来布局两个横排的list*/
+/*li.mine {
+	float: left;
+	color: rgb(0, 234, 163);
+}
+
+li.comment {
+	font-size: 20pt;
+}
+
+li.posted {
+	margin-left: 20px;
+}
+
+li.like {
+	margin-left: 8px;
+}
+
+#info-bar img{
+	vertical-align: middle;
+	margin-right: 8px;
+}*/
+/*五个圆环*/
+.button {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	cursor: pointer;
+	/*background-color: #1E459F;*/
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 0px 0px;
+	width: 0px;
+	height: 0px;
+	opacity: 0;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18pt;
+	color: #208E87;
+	z-index: 3;
+	-webkit-transition:all 0.5s ease-in;
+	-moz-transition:all 0.5s ease-in;
+	-o-transition:all 0.5s ease-in;
+	transition:all 0.5s ease-in;
+}
+
+#button:hover li.button {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	background-size: 18px 18px;
+	opacity: 1;
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+/*左边五个list的背景及动画设置*/
+.mask {
+	/*background-image: url(assets/images/nomask.png);*/
+}
+
+#button:hover .mask{
+	-webkit-transform: translate(-80px, -52px);
+	-moz-transform: translate(-80px, -52px);
+	-ms-transform: translate(-80px, -52px);
+	-o-transform: translate(-80px, -52px);
+	transform: translate(-80px, -52px);
+}
+
+.history{
+	/*background-image: url(assets/images/history.png);*/
+}
+
+#button:hover .history{
+	-webkit-transform: translate(-89px, -14px);
+	-moz-transform: translate(-89px, -14px);
+	-ms-transform: translate(-89px, -14px);
+	-o-transform: translate(-89px, -14px);
+	transform: translate(-89px, -14px);
+}
+
+.message{
+	/*background-image: url(assets/images/message.png);*/
+	opacity: 0;
+}
+
+#button:hover .message{
+	-webkit-transform: translate(-77px, 25px);
+	-moz-transform: translate(-77px, 25px);
+	-ms-transform: translate(-77px, 25px);
+	-o-transform: translate(-77px, 25px);
+	transform: translate(-77px, 25px);
+	opacity: 1;
+}
+
+.setting{
+	/*background-image: url(assets/images/setting.png);*/
+}
+
+#button:hover .setting{
+	-webkit-transform: translate(-42px, 45px);
+	-moz-transform: translate(-42px, 45px);
+	-ms-transform: translate(-42px, 45px);
+	-o-transform: translate(-42px, 45px);
+	transform: translate(-42px, 45px);
+}
+
+.sign{
+	/*background-image: url(assets/images/signin.png);*/
+}
+
+#button:hover .sign{
+	-webkit-transform: translate(1px, 40px);
+	-moz-transform: translate(1px, 40px);
+	-ms-transform: translate(1px, 40px);
+	-o-transform: translate(1px, 40px);
+	transform: translate(1px, 40px);
+}
+
+/*消息数量浮标*/
+.unread{
+	margin: 0;
+	position: absolute;
+	right: -5px;
+	top: -5px;
+	background-color: rgba(252, 56, 50, 1);
+	text-align: center;
+	font-size: 10pt;
+	color: white;
+	width: 19px;
+	height: 19px;
+	line-height: 19px;
+	font-weight: bold;
+	visibility: hidden;
+}
+
+.statue_inactivation {
+	background-color: #7E7E7E;
+}
+
+.statue_activation {
+	background-color: #23469B;
+}

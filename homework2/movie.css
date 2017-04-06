@@ -1,0 +1,139 @@
+/*body添加背景图片，字体*/
+#overallPage {
+	background-image: url(background.png);
+	font-size: 8pt;
+	font-family: Verdana, Tahoma, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+/*banner横幅,图片高度，背景图片横向repeat*/
+#banner {
+	background-image: url(bannerbackground.png);
+	height: 50px;
+	background-repeat: repeat-x;
+}
+/*图片居中*/
+#banner img {
+	height: 50px;
+	display: block;
+	margin: 0 auto;
+}
+/*标题TMNT(2007)字体，居中*/
+h1#heading {
+	font-size: 24pt;
+	font-weight: bold;
+	font-family: Tahoma, Verdana, sans-serif;
+	text-align: center;
+}
+/*设置border*/
+#content {
+	width: 800px;
+	border: 4px solid gray;
+	margin: auto;
+}
+/*border框内的右边，电影信息的设置*/
+#generaloverview {
+	width: 250px;
+	float: right;
+	background-color: #A2B964;
+}
+/*list字体样式设置*/
+div#generaloverview dt.title {
+	font-weight: bold;
+	margin-left: 10px;
+	font-family: Arial, sans-serif;
+}
+div#generaloverview dd.information {
+	margin-bottom: 1em;
+	font-family: Arial, sans-serif;
+}
+/*rotten设置图片高度宽度*/
+.rotten {
+	background: url(rottenbackground.png) repeat-x;
+	height: 83px;
+	width: 550px;
+}
+.rotten img {
+	height: 83px;
+}
+/*设置32%*/
+div.rotten span.rating {
+	font-size: 48pt;
+	font-weight: bold;
+	color: red;
+    vertical-align: 12px;
+}
+/*设置88*/
+div.rotten span.totalReviews {
+	font-size: 8pt;
+	color: white;
+    vertical-align: 12px;
+}
+/*把reviews设置成两列*/
+.left_column {
+	float: left;
+	width: 25%;
+}
+.right_column {
+	float: right;
+	width: 35%;
+}
+/*reviews设置border，border间隔*/
+.reviews {
+	width: 240px;
+	margin: 9px;
+	font-size: 8pt;
+	font-weight: bold;
+	border: 2px solid gray;
+	background-color: #E1D697;
+	overflow: hidden;
+	padding: 8px;
+}
+/*设置quote环绕icon(fresh.gif/rotten.gif)*/
+p.reviews img {
+	float: left;
+	margin-right: 5px;
+}
+/*设置评论reviews到border边框的距离*/
+.quote {
+	position: relative;
+	margin-right: 2px;
+}
+/*设置critics距离下一个border的距离*/
+.reviewer {
+	margin-left: 5px;
+	margin-bottom: 3em;
+}
+/*设置critics名称环绕critic.gif*/
+p.reviewer img {
+	float:left;
+	margin-right:5px;
+}
+/*设置publication为斜体字*/
+p.reviewer > span.publication {
+	font-style: italic;
+}
+/*设置bar到border边框底部*/
+#bar {
+	clear: right;
+	text-align: center;
+	background-color: #A2B964;
+	padding: 5px;
+	width: 790px;
+}
+div#bar p.review_set {
+	margin: 0;
+}
+/*设置html/css validator图标在右下角*/
+#html {
+	border: 0;
+	position: fixed;
+	bottom: 33px;
+	right: 0;
+}
+#css {
+	border: 0;
+	position: fixed;
+	bottom: 0px;
+	right: 0;
+}

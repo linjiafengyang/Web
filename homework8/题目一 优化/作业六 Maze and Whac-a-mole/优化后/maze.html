@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Maze</title>
+		<link rel="stylesheet" type="text/css" href="./css/maze.css">
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="information">
+				<div class="title">The Amazing Mouse Maze!</div>
+				<div class="gameplay">Move your mouse over the "S" to begin.</div>
+				<div id="notice"></div>
+			</div>
+			<div id="gameContainer">
+				<div id="start">S</div>
+				<div id="end">E</div>
+				<li class="wall" id="leftTop"></li>
+				<li class="wall" id="middleTop"></li>
+				<li class="wall" id="rightTop"></li>
+				<li class="wall" id="leftMiddle"></li>
+				<li class="wall" id="middleMiddle"></li>
+				<li class="wall" id="rightMiddle"></li>
+				<li class="wall" id="leftBottom"></li>
+				<li class="wall" id="middleBottom"></li>
+				<li class="wall" id="rightBottom"></li>
+			</div>
+			<div class="instruction">
+				<div class="alert">The object of this game is to guide the mouse cursor through the start area and get to the end area. Be sure to avoid the walls:</div>
+				<div class="example"></div>
+				<div class="wishes">Good luck!</div>
+			</div>
+			<div class="sidebar">
+				<div class="subBar_1 subBar"><a href="index.html">index</a></div>
+				<div class="subBar_2 subBar"><a href="maze.html">maze</a></div>
+				<div class="subBar_3 subBar"><a href="whac-a-mole.html">whac-a-mole</a></div>
+			</div>
+		</div>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="lodash.js"></script>
+		<script type="text/javascript" src="./js/mazeNew.js"></script>
+	</body>
+</html>

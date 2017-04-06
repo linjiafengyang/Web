@@ -1,0 +1,45 @@
+doctype html
+html
+    head
+        meta(http-equiv='Content-Type', content='text/html;charset=UTF-8')
+        script(type='text/javascript', src='javascripts/jquery.js')
+        script(type='text/javascript', src='javascripts/validator.js')
+        script(type='text/javascript', src='/javascripts/regist.js')
+        link(rel='stylesheet', type='text/css', href='/stylesheets/regist.css')
+        title Register
+    body
+        form(method='post')
+            p#tittle 用户注册
+            div
+                label(for='username')  用户名
+                input(id="username" type='text', name='username', value=user.username)
+                br
+                span.error  
+            div
+                label(for='password')   密码
+                input(id="password" type='password', name='password', value=user.password)
+                br
+                span.error  
+            div
+                label(for='confirm') 确认密码
+                input(id="confirm" type='password', name='confirm', value=user.confirm)
+                br
+                span.error  
+            div
+                label(for='sid')   学号
+                input#sid(type='text', name='sid', value=user.sid)
+                br
+                span.error  
+            div
+                label(for='phone')   电话
+                input#phone(type='text', name='phone', value=user.phone)
+                br
+                span.error  
+            div
+                label(for='email')   邮箱
+                input(id="email", type='text', name='email', value=user.email)
+                br
+                span.error  
+            p#error &nbsp;#{error}
+            input.button.submit(type='submit' value='提交')
+            input.button.reset(type='reset' value='清除')
