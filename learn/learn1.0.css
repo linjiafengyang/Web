@@ -1,0 +1,108 @@
+blockquote {
+	border: 4px solid;
+	border-color: #85C2c6 #F7C200 #4493A0 #DF127B;
+	border-style: solid dotted groove double;
+	border-width: 5px 10px 15px 20px;
+	-moz-box-shadow: 0px 30px 60px 20px;
+}
+#hemisphere {
+	border: 4px solid green;
+	border-radius: 100px 100px 0 0;
+	-moz-border-radius: 100px 100px 0 0;
+}
+#adv-bullet {
+	border-width: 12px;
+	border-style: groove;
+	border-color: red blue green black;
+	border-radius: 20px 100px 100px 20px;
+	-moz-border-radius: 20px 100px 100px 20px;
+}
+#heading1 {
+	text-shadow: 0 6px 4px #85C226, -3px -5px 4px #fe2192, 3px -5px 4px #f7c200;
+	background: #000000;
+	color: #1e90ff;
+	-webkit-transform: skew(45deg, 4deg);
+}
+#heading2 {
+	background: #cccccc;
+	color: #cccccc;
+	text-shadow: 1px 1px 3px #666666, -1px -1px 3px #ffffff;
+}
+#heading3 {
+	box-shadow: 10px 10px 20px 10px #000;
+	-moz-box-shadow: 10px 10px 20px 10px #000;
+	-webkit-box-shadow: 10px 10px 20px 10px #000;
+}
+#innershadow {
+	box-shadow: inset 10px 10px 20px 0px #000;
+	-moz-box-shadow: inset 10px 10px 20px 0px #000;
+	-webkit-box-shadow: inset 10px 10px 20px 0px #000;
+}
+#footer1 {
+	box-shadow: inset 0px 0px 15px 0px #000;
+	-moz-box-shadow: inset 0px 0px 15px 0px #000;
+	-webkit-box-shadow: inset 0px 0px 15px 0px #000;
+}
+.example1:hover {
+	-webkit-transform: translateX(40px);
+}
+.example2:hover {
+	-webkit-transform: translateX(40px) scale(0.5);
+}
+.example3:hover {
+	-webkit-transform: rotate(90deg) translateX(40px) scale(0.5);
+	-webkit-transition-duration: 2s;
+	-webkit-transition-delay: 1s;
+}
+.example4:hover {
+	transform: rotateX(120deg);
+	-webkit-transform: rotateX(120deg);
+	-moz-transform: rotateX(120deg);
+	-webkit-transition-duration: 1s;
+}
+.example5 {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	background: red;
+	animation-name: myfirst;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-play-state: running;
+}
+@-webkit-keyframes myfirst {
+	0% {
+		background: red;
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		background: yellow;
+		left: 200px;
+		top: 0px;
+	}
+	50% {
+		background: green;
+		left: 200px;
+		top: 200px;
+	}
+	100% {
+		background: blue;
+		left: 0px;
+		top: 0px;
+	}
+}
+@font-face {
+	font-family: rockfont;
+	src: url("fonts/rockfont.eot");
+}
+@font-face {
+	font-family: rockfont;
+	src: url("fonts/rockfont.ttf");
+}
+#change {
+	font-family: rockfont;
+}

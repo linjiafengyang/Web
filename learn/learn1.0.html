@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="learn1.0.css">
+	<title></title>
+</head>
+<body>
+	<nav id="adv-bullet">
+		<a href="/emei/">峨眉山</a>
+		<a href="/wutai/">五台山</a>
+		<a href="/putuo/">普陀山</a>
+		<a href="/jiuhua">九华山</a>
+	</nav>
+	<h1 id="heading1">会当凌绝顶</h1>
+	<article>
+		<header>
+			<hgroup>
+			<h2 id="heading2">五岳</h2>
+			<h3 id="change">--五岳小知识</h3>
+			</hgroup>
+		</header>
+		<section>
+			<h3 id="heading3">泰山： 会当凌绝顶，一览众山小</h3><br />
+			<p id="innershadow">泰山......</p>
+			......
+		</section>
+		<aside>
+			<blockquote>
+				岱宗夫如何？齐鲁青未了。<br />
+				-- 《望岳》 杜甫
+			</blockquote>
+		</aside>
+		<footer id="footer1">收集整理</footer>
+	</article>
+	<article>
+		<h2>四大佛教名山</h2>
+		<h3>峨眉山： 峨眉天下秀</h3>
+		<p>峨眉山......</p>
+		<footer>收集整理</footer>
+	</article>
+	<p>泰山是中国五岳之首</p>
+	<details>
+		<summary>最著名的泰山诗词：《望岳》</summary>
+		<p id="hemisphere">
+			会当凌绝顶，一览众山小。<br />
+			岱宗夫如何，齐鲁青未了。<br />
+			造化钟神秀，阴阳割昏晓。<br />
+			荡胸生层云，决眦入归鸟。<br />
+		</p>
+	</details>
+	<img src="1.jpg" class="example1"><br />
+	<img src="1.jpg" class="example2"><br />
+	<img src="1.jpg" class="example3"><br />
+	<img src="1.jpg" class="example4"><br />
+	<div>
+		<p class="example5">this is an example.</p>
+	</div>
+	<svg xmlns="1.jpg" version="1.0">
+		<circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+		<text x="60" y="110" fill="red">泰山落日圆</text>
+	</svg>
+
+	<canvas id="myCanvas"></canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('myCanvas');
+		var ctx=canvas.getContext('2d');
+		ctx.fillStyle='#FF0000';
+		ctx.beginPath();
+		ctx.arc(100,50,40,0,Math.PI*2,true);
+		ctx.closePath();
+		ctx.fill();
+		ctx.font = '16px 宋体'
+		ctx.fillText('泰山落日圆'，60，110)
+	</script>
+
+	<video width="500" height="375" controls autoplay poster="Front page.jpg">
+		<source src="2016a.mp4" type="video/mp4">
+	</video>
+	<audio controls autoplay>
+		<source src="2016.mp3" type="audio/mp3">
+	</audio>
+</body>
+</html>
